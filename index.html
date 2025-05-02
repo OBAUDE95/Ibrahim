@@ -3,177 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ibrahim Adekolu | Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    /* Reset and Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      background-color: #f5f7fa;
-      color: #333;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Header */
-    header {
-      background-color: #1e2a38;
-      color: #fff;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
-      color: #fff;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #00bcd4;
-    }
-
-    /* Hero Section */
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 20px;
-      background-color: #e0f7fa;
-    }
-    .hero-content {
-      flex: 1 1 400px;
-      max-width: 600px;
-      padding: 20px;
-    }
-    .hero-content h1 {
-      font-size: 2.5rem;
-      color: #1e2a38;
-    }
-    .hero-content p {
-      margin: 20px 0;
-      font-size: 1.1rem;
-    }
-    .hero-image {
-      flex: 1 1 300px;
-      max-width: 400px;
-      padding: 20px;
-      text-align: center;
-    }
-    .hero-image img {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #1e2a38;
-    }
-
-    /* Sections */
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #1e2a38;
-    }
-
-    /* Skills */
-    .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-    .skill {
-      background-color: #1e2a38;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-weight: 500;
-    }
-
-    /* Experience & Projects */
-    .card {
-      background-color: #fff;
-      border-left: 5px solid #00bcd4;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .card h3 {
-      color: #1e2a38;
-    }
-    .card p {
-      margin: 10px 0;
-    }
-
-    /* Contact */
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-    .contact-info a {
-      color: #1e2a38;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-    }
-    .contact-info a:hover {
-      color: #00bcd4;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #1e2a38;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-      }
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-    }
-  </style>
+  <title>Ibrahim Adekolu - Data Analyst</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <div class="logo">Ibrahim Adekolu</div>
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -183,79 +21,127 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <section id="hero">
     <div class="hero-content">
-      <h1>Data Analyst</h1>
-      <p>Results-driven Data Analyst with expertise in data interpretation, visualization, and transformation. Skilled in processing large datasets to optimize business performance and service delivery.</p>
+      <h1>Hello, I'm Ibrahim</h1>
+      <p>Results-driven Data Analyst with expertise in data interpretation, visualization, and transformation.</p>
     </div>
-    <div class="hero-image">
-      <img src="https://via.placeholder.com/250" alt="Ibrahim Adekolu">
+    <div class="profile-image">
+      <img src="images/profile.jpg" alt="Ibrahim Adekolu">
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
-    <p style="text-align: center; max-width: 800px; margin: auto;">
-      M.Sc. in International Business with Data Analytics (Merit) from University of Ulster, UK (2023). B.Sc. in Economics (Second Class Upper) from Adekunle Ajasin University, Nigeria (2018). National Diploma in Banking and Finance from Rufus Giwa Polytechnic. Certified in Data Analytics from Welup Digital Academy.
-    </p>
+    <p>Results-driven Data Analyst with expertise in data interpretation, visualization, and transformation. Skilled in processing large datasets, identifying key trends, and drawing actionable conclusions to optimize business performance and service delivery.</p>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills">
-    <h2>Technical & Soft Skills</h2>
+    <h2>Skills</h2>
     <div class="skills-container">
-      <div class="skill">Power BI</div>
-      <div class="skill">Tableau</div>
-      <div class="skill">Advanced Excel</div>
-      <div class="skill">Google Analytics</div>
-      <div class="skill">Python</div>
-      <div class="skill">MySQL</div>
-      <div class="skill">PostgreSQL</div>
-      <div class="skill">SQL</div>
-      <div class="skill">APIs</div>
-      <div class="skill">Team Coordination</div>
-      <div class="skill">Public Speaking</div>
-      <div class="skill">Project Management</div>
-      <div class="skill">Leadership</div>
-      <div class="skill">Time Management</div>
+      <div class="card">
+        <h3>Data Visualization</h3>
+        <p>Power BI, Tableau</p>
+      </div>
+      <div class="card">
+        <h3>Analytical Tools</h3>
+        <p>Advanced Excel, Google Analytics, Python</p>
+      </div>
+      <div class="card">
+        <h3>Statistical Analysis</h3>
+        <p>Regression Analysis, Hypothesis Testing, A/B Testing</p>
+      </div>
+      <div class="card">
+        <h3>Database Management</h3>
+        <p>MySQL, PostgreSQL</p>
+      </div>
+      <div class="card">
+        <h3>Data Extraction & Transformation</h3>
+        <p>SQL, APIs, CSVs</p>
+      </div>
+      <div class="card">
+        <h3>Soft Skills</h3>
+        <p>Team Coordination, Communication, Emotional Intelligence, Project Management</p>
+      </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
   <section id="experience">
     <h2>Work Experience</h2>
-    <div class="card">
-      <h3>Data Analyst | Baobab – United Kingdom (2024 – Present)</h3>
-      <p>Collected and transferred data across systems with precision, ensuring consistency and accuracy. Cleaned and prepared large datasets for timely government reporting. Analyzed Revenues and Benefits data to guide strategic decisions and created insightful dashboards using Power BI and Excel.</p>
-    </div>
-    <div class="card">
-      <h3>Data Analyst | Advance Career (2023 – 2024)</h3>
-      <p>Improved data collection methods, cutting reporting time by 35%. Analyzed customer and operations data to spot inefficiencies and drive improvements. Built accurate KPI tracking systems with 95% precision.</p>
-    </div>
-    <div class="card">
-      <h3>Data Analyst | Welup Digital (2023 – 2024)</h3>
-      <p>Enhanced data collection processes, reducing reporting time by 35%. Collaborated with stakeholders to boost productivity through data-driven changes. Built performance tracking tools with 95% reporting accuracy.</p>
+    <div class="experience-container">
+      <div class="card">
+        <h3>Data Analyst - Baobab, UK (2024 – Present)</h3>
+        <ul>
+          <li>Collected and transferred data across systems with precision, ensuring consistency and accuracy.</li>
+          <li>Cleaned and prepared large datasets for timely government reporting.</li>
+          <li>Analyzed Revenues and Benefits data to guide strategic decisions.</li>
+          <li>Created insightful dashboards using Power BI and Excel.</li>
+          <li>Reported findings to key stakeholders, including the Department for Work and Pensions.</li>
+          <li>Embedded sustainability principles into data processes and assisted with electoral registration and election tasks.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Data Analyst - Advance Career (2023 – 2024)</h3>
+        <ul>
+          <li>Improved data collection methods, cutting reporting time by 35%.</li>
+          <li>Analyzed customer and operations data to spot inefficiencies and drive improvements.</li>
+          <li>Built accurate KPI tracking systems with 95% precision.</li>
+          <li>Leveraged SQL and Excel to uncover trends and flag opportunities.</li>
+          <li>Worked with key stakeholders to enhance processes using data insights.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Data Analyst - Welup Digital (2023 – 2024)</h3>
+        <ul>
+          <li>Improved data collection processes, reducing reporting time by 35%.</li>
+          <li>Analyzed operational data to uncover inefficiencies and growth areas.</li>
+          <li>Collaborated with stakeholders to boost productivity through data-driven changes.</li>
+          <li>Built performance tracking tools with 95% reporting accuracy.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects">
-    <h2>Key Projects</h2>
-    <div class="card">
-      <h3>Car Pricing and Sales Data Analysis</h3>
-      <p>Analyzed over 1,000 car listings to derive pricing insights and automotive market trends. Identified a 10% average pricing gap between foreign and local vehicles, informing a targeted pricing strategy for optimized inventory management.</p>
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="card">
+        <h3>Car Pricing and Sales Data Analysis</h3>
+        <p>Analyzed over 1,000 car listings to derive pricing insights and automotive market trends. Key Insight: Uncovered a 10% average pricing gap between foreign and local vehicles, informing a targeted pricing strategy for optimized inventory management.</p>
+      </div>
+      <div class="card">
+        <h3>HR Data Analytics & Workforce Intelligence (Power BI)</h3>
+        <p>Developed an interactive HR dashboard in Power BI, analyzing data for 300+ employees. Identified Production as the top cost center and optimized recruitment channels.</p>
+      </div>
+      <div class="card">
+        <h3>Global Superstore Sales Performance Analysis (Power BI)</h3>
+        <p>Led a comprehensive data analytics project to evaluate retail sales performance across 30+ countries using Power BI. Identified the USA as the most profitable region ($286K) and Southeast Asia as a low-performing market, recommending the discontinuation of certain subcategories based on regional insights.</p>
+      </div>
+      <div class="card">
+        <h3>Tips Data Analysis & Reporting Dashboard</h3>
+        <p>Conducted detailed analysis of restaurant tipping behavior across multiple dimensions including day, gender, and smoking status. Key Insight: Revealed that male customers tipped 15% more than females, and non-smokers tipped more consistently—supporting data-driven service personalization.</p>
+      </div>
+      <div class="card">
+        <h3>Walmart Sales Performance Analysis</h3>
+        <p>Evaluated Walmart store sales data to identify performance trends across departments and regions. Key Insight: Found that rising fuel prices negatively impacted weekly sales by 12%, guiding the recommendation of targeted promotions during high-cost fuel periods.</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>HR Data Analytics & Workforce Intelligence (Power BI)</h3>
-      <p>Developed an interactive HR dashboard in Power BI, analyzing data for 300+ employees. Identified Production as the top cost center and optimized recruitment channels.</p>
-    </div>
-    <div class="card">
-      <h3>Global Superstore Sales Performance Analysis (Power BI)</h3>
-      <p>Led a comprehensive data analytics project to evaluate retail sales performance across 30+ countries. Identified the USA as the most profitable region and recommended discontinuation of certain subcategories based on regional insights.</p>
-    </div>
-    <div
-::contentReference[oaicite:0]{index=0}
+  </section>
 
-  
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ibrahim Adekolu</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
