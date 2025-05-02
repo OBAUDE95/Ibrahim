@@ -1,222 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ibrahim Adekolu - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ibrahim Adekolu - Data Analyst Portfolio</title>
     <style>
-        /* General Reset */
-        * {
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f7f7f7;
         }
 
-        /* Body Styling */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+        h1, h2, h3 {
             color: #333;
         }
 
-        /* Hero Section */
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Header Section */
         .hero {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background: #333;
+            color: #fff;
+            padding: 100px 0;
             text-align: center;
-            background: #2c3e50;
-            color: white;
-            padding: 20px;
-            min-height: 100vh;
         }
 
         .hero h1 {
             font-size: 3em;
-            margin-bottom: 10px;
         }
 
-        .hero h2 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
+        .hero p {
+            font-size: 1.2em;
         }
 
-        /* Image Hover Zoom */
-        .hero-image {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 20px;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-
-        .hero-image img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .hero-image img.zoom-in {
-            transform: scale(1.2);
-        }
-
-        /* Hover and Button Effects */
-        .action-button {
-            background-color: #00bcd4;
-            color: white;
+        .cta-btn {
+            background-color: #007bff;
             padding: 10px 20px;
+            color: white;
             border: none;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: 1.2em;
             cursor: pointer;
-            margin-top: 10px;
-            transition: all 0.3s ease;
         }
 
-        .action-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        .cta-btn:hover {
+            background-color: #0056b3;
         }
 
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
+        /* Navigation */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* About Me Section */
+        .about-me {
+            background: #fff;
+            padding: 50px 0;
+        }
+
+        .about-me h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-me p {
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        /* Work Experience Section */
+        .work-experience {
+            background: #f0f0f0;
+            padding: 50px 0;
+        }
+
+        .work-experience h2 {
+            text-align: center;
+        }
+
+        .work-experience ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .work-experience li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: #fff;
+            padding: 50px 0;
+        }
+
+        .projects h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .project-gallery {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .project img {
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-            padding-top: 60px;
+            object-fit: cover;
         }
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
+        .project-details {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: none;
+            justify-content: center;
+            align-items: center;
         }
 
-        .close {
-            color: #aaa;
-            font-size: 28px;
-            font-weight: bold;
-            float: right;
+        /* Contact Section */
+        .contact {
+            background: #333;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
         }
 
-        .close:hover,
-        .close:focus {
-            color: black;
+        .contact a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #007bff;
+            color: white;
             text-decoration: none;
-            cursor: pointer;
+            border-radius: 5px;
         }
 
-        /* Scroll Animations */
-        .fade-in {
-            opacity: 0;
-            transition: opacity 0.6s ease;
+        .contact a:hover {
+            background: #0056b3;
         }
 
-        .fade-in.visible {
-            opacity: 1;
-        }
-
-        /* Mobile Responsiveness */
+        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2em;
             }
 
-            .hero h2 {
-                font-size: 1.2em;
+            .cta-btn {
+                font-size: 1em;
             }
 
-            .hero-image img {
-                width: 200px;
+            .project {
+                width: 100%;
                 height: 200px;
             }
 
-            .action-button {
-                font-size: 0.9rem;
+            .project-gallery {
+                flex-direction: column;
             }
         }
     </style>
 </head>
+
 <body>
 
+    <!-- Header Section -->
     <div class="hero">
-        <div class="hero-image" id="hero-img-container">
-            <img src="https://via.placeholder.com/250" alt="Ibrahim Adekolu" id="hero-img">
-        </div>
-        <h1>Ibrahim Adekolu</h1>
-        <h2>Data Scientist & Web Developer</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis erat quis ante consequat, sed tempus ante egestas.</p>
-
-        <div>
-            <button class="action-button" onclick="openModal()">Contact Info</button>
+        <div class="container">
+            <h1>Ibrahim Adekolu</h1>
+            <p>Empowering Business Decisions through Data-Driven Insights</p>
+            <button class="cta-btn" onclick="window.location.href='mailto:ibrahimadekolu@gmail.com'">Contact Me</button>
         </div>
     </div>
 
-    <!-- Modal for Contact Info -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Contact Ibrahim Adekolu</h2>
-            <p>Email: ibrahimadekolu@gmail.com</p>
-            <p>Phone: +44 7377 277688</p>
+    <!-- Navigation -->
+    <nav>
+        <a href="#about-me">About Me</a>
+        <a href="#work-experience">Work Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About Me Section -->
+    <div id="about-me" class="about-me">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Data Analyst with a strong background in business intelligence, data visualization, and statistical analysis.
+                Proven track record of delivering actionable insights to improve business performance.</p>
         </div>
     </div>
 
-    <!-- Scroll Animations Section -->
-    <section class="fade-in">
-        <h2>About Me</h2>
-        <p>I am a passionate data scientist and web developer with a focus on real-time data analysis and web applications.</p>
-    </section>
+    <!-- Work Experience Section -->
+    <div id="work-experience" class="work-experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <ul>
+                <li><strong>Data Analyst</strong> at Baobab – UK (2024-Present): Developed interactive dashboards and improved reporting efficiency.</li>
+                <li><strong>Data Analyst</strong> at Advance Career (2023-2024): Enhanced data collection methods, cutting reporting time by 35%.</li>
+                <li><strong>Data Analyst</strong> at Welup Digital (2023-2024): Automated reporting and increased operational efficiency by 30%.</li>
+            </ul>
+        </div>
+    </div>
 
+    <!-- Projects Section -->
+    <div id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-gallery">
+                <div class="project" onmouseover="showDetails('project1')" onmouseout="hideDetails('project1')">
+                    <img src="project1-thumbnail.jpg" alt="Project 1">
+                    <div id="project1" class="project-details">
+                        <h3>Project 1</h3>
+                        <p>Data analysis using Python and SQL.</p>
+                    </div>
+                </div>
+                <div class="project" onmouseover="showDetails('project2')" onmouseout="hideDetails('project2')">
+                    <img src="project2-thumbnail.jpg" alt="Project 2">
+                    <div id="project2" class="project-details">
+                        <h3>Project 2</h3>
+                        <p>Building dashboards in Power BI for sales performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Phone: +447377277688</p>
+            <p>Email: <a href="mailto:ibrahimadekolu@gmail.com">ibrahimadekolu@gmail.com</a></p>
+            <p>Location: Birmingham, UK</p>
+            <a href="mailto:ibrahimadekolu@gmail.com">Get in Touch</a>
+        </div>
+    </div>
+
+    <!-- JavaScript for Project Hover Effects -->
     <script>
-        // Image Hover Zoom Effect
-        const heroImage = document.getElementById("hero-img");
-
-        heroImage.addEventListener("mouseenter", function() {
-            heroImage.classList.add("zoom-in");
-        });
-
-        heroImage.addEventListener("mouseleave", function() {
-            heroImage.classList.remove("zoom-in");
-        });
-
-        // Modal Popup for Contact Info
-        function openModal() {
-            document.getElementById("contactModal").style.display = "block";
+        function showDetails(projectId) {
+            document.getElementById(projectId).style.display = 'block';
         }
 
-        function closeModal() {
-            document.getElementById("contactModal").style.display = "none";
+        function hideDetails(projectId) {
+            document.getElementById(projectId).style.display = 'none';
         }
-
-        // Scroll Animations (Fade-in effect)
-        const fadeElements = document.querySelectorAll('.fade-in');
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        fadeElements.forEach(element => {
-            observer.observe(element);
-        });
     </script>
+
 </body>
+
 </html>
