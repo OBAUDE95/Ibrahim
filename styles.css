@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;600&display=swap');
-
 /* Global Styles */
 body {
   font-family: 'Lato', sans-serif;
@@ -36,6 +34,8 @@ header {
   gap: 20px;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap; /* Allow items to wrap when there is insufficient space */
+  overflow: hidden; /* Ensure no overflow outside the navbar */
 }
 
 .nav-links a {
