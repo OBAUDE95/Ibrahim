@@ -5,13 +5,13 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f7fb;
-  color: #333;
+  background: #f4f7fb; /* Light gray background for a more neutral and professional tone */
+  color: #333; /* Dark text for better readability */
 }
 
 /* Header */
 header {
-  background: #2c3e50;
+  background: #2c3e50; /* Darker header background to reflect a more professional tone */
   padding: 15px 20px;
   position: fixed;
   width: 100%;
@@ -26,7 +26,7 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ecf0f1;
+  color: #ecf0f1; /* Lighter logo color for contrast */
   font-family: 'Poppins', sans-serif;
 }
 
@@ -45,13 +45,13 @@ header {
 }
 
 .nav-links a:hover {
-  color: #3498db;
+  color: #3498db; /* Subtle blue hover color for interactivity */
 }
 
 /* Hero Section */
 #hero {
   padding: 120px 20px 60px;
-  background: linear-gradient(to bottom right, #f1f1f1, #e2e8f0);
+  background: linear-gradient(to bottom right, #f1f1f1, #e2e8f0); /* Soft gradient for professionalism */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -72,13 +72,13 @@ header {
 
 .text-content h2 {
   font-size: 2.2rem;
-  color: #3498db;
+  color: #3498db; /* Professional blue color */
   margin: 10px 0;
 }
 
 .text-content p {
   font-size: 1.1rem;
-  color: #7f8c8d;
+  color: #7f8c8d; /* Lighter gray for readability */
   margin: 10px 0 20px;
 }
 
@@ -93,7 +93,7 @@ header {
 
 /* Button */
 .btn {
-  background: linear-gradient(to right, #3498db, #2980b9);
+  background: linear-gradient(to right, #3498db, #2980b9); /* Blue gradient for a more corporate look */
   color: white;
   padding: 10px 20px;
   border-radius: 25px;
@@ -104,7 +104,7 @@ header {
 }
 
 .btn:hover {
-  background: linear-gradient(to right, #2980b9, #1f6a8d);
+  background: linear-gradient(to right, #2980b9, #1f6a8d); /* Darker blue on hover */
 }
 
 /* Section Titles */
@@ -112,13 +112,37 @@ section h2 {
   text-align: center;
   font-size: 2rem;
   font-family: 'Poppins', sans-serif;
-  color: #2c3e50;
+  color: #2c3e50; /* Professional dark color */
   margin-bottom: 30px;
 }
 
 /* Section Layout */
 section {
   padding: 60px 20px;
+}
+
+/* Cards */
+.about-text,
+.timeline-item,
+.education-card,
+.contact-info {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for a clean, corporate feel */
+}
+
+.timeline-item h3,
+.education-card h3 {
+  color: #3498db;
+  margin-bottom: 5px;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #888;
 }
 
 /* Skills Section */
@@ -159,82 +183,73 @@ section {
 /* Projects */
 #projects {
   padding: 4rem 2rem;
-  background-color: #f9fafb;
+  background-color: #f9fafb; /* Lighter background for better contrast */
 }
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2.5rem;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* More flexible layout */
+  gap: 2.5rem; /* Increased gap for better spacing */
+  justify-items: center; /* Centers the cards */
   align-items: start;
 }
 
 .project-card {
-  background-color: #ffffff;
+  background-color: #ffffff; /* Clean white background */
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
-  width: 100%;
-  max-width: 350px;
-  position: relative;
+  border-radius: 15px; /* Rounded corners for a more modern feel */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smooth transition on hover */
+  overflow: hidden; /* Keeps the content within the borders */
+  width: 100%; /* Full width to allow for better flexibility */
+  max-width: 350px; /* Limits the width to maintain balance */
 }
 
 .project-card:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+  transform: translateY(-5px); /* Slight raise effect */
 }
 
 .project-card h3 {
   margin-top: 0;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Larger title for prominence */
   font-weight: 600;
-  color: #2c3e50;
+  color: #2c3e50; /* Darker color for the title */
 }
 
 .project-card p {
-  font-size: 1.1rem;
+  font-size: 1.1rem; /* Larger text for readability */
   line-height: 1.6;
-  color: #7f8c8d;
+  color: #7f8c8d; /* Light gray text */
   margin-top: 1rem;
-  text-align: justify;
+  text-align: justify; /* Improves readability */
 }
 
-.project-card ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin-top: 1rem;
-}
-
-.project-card ul li {
-  color: #7f8c8d;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.project-card .view-now {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+.project-card .button {
+  margin-top: 1.5rem;
   padding: 10px 20px;
-  background: linear-gradient(to right, #3498db, #2980b9);
+  background: linear-gradient(to right, #3498db, #2980b9); /* Gradient button */
   color: white;
   text-decoration: none;
   font-weight: bold;
   border-radius: 25px;
-  display: none;
+  display: inline-block;
+  text-align: center;
   transition: background 0.3s ease-in-out;
 }
 
-.project-card:hover .view-now {
-  display: inline-block;
+.project-card .button:hover {
+  background: linear-gradient(to right, #2980b9, #1f6a8d); /* Darker gradient on hover */
 }
 
-.project-card .view-now:hover {
-  background: linear-gradient(to right, #2980b9, #1f6a8d);
+/* Contact */
+.contact-info a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive Fixes */
@@ -254,7 +269,7 @@ section {
   }
 
   .projects-container {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Adjusted layout for mobile */
   }
 
   .project-card {
@@ -262,11 +277,11 @@ section {
   }
 
   .project-card h3 {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Slightly smaller title on mobile */
   }
 
   .project-card p {
-    font-size: 1rem;
+    font-size: 1rem; /* Slightly smaller text on mobile */
   }
 }
 
