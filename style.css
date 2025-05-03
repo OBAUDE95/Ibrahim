@@ -5,28 +5,28 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
-  background: #fef6f9;
-  color: #2c3e50;
+  background: #f4f7fb; /* Light gray background for a more neutral and professional tone */
+  color: #333; /* Dark text for better readability */
 }
 
 /* Header */
 header {
-  background: #fff;
+  background: #2c3e50; /* Darker header background to reflect a more professional tone */
   padding: 15px 20px;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000 ;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #c471ed;
+  color: #ecf0f1; /* Lighter logo color for contrast */
   font-family: 'Poppins', sans-serif;
 }
 
@@ -40,18 +40,18 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: #2c3e50;
+  color: #ecf0f1;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #c471ed;
+  color: #3498db; /* Subtle blue hover color for interactivity */
 }
 
 /* Hero Section */
 #hero {
-  padding: 100px 20px 60px;
-  background: linear-gradient(to bottom right, #ffe2f0, #f3e5f5);
+  padding: 120px 20px 60px;
+  background: linear-gradient(to bottom right, #f1f1f1, #e2e8f0); /* Soft gradient for professionalism */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -65,20 +65,20 @@ header {
 }
 
 .text-content h1 {
-  font-size: 1.6rem;
-  color: #8e44ad;
+  font-size: 1.4rem;
+  color: #2c3e50;
   margin: 0;
 }
 
 .text-content h2 {
-  font-size: 2.5rem;
-  color: #c471ed;
+  font-size: 2.2rem;
+  color: #3498db; /* Professional blue color */
   margin: 10px 0;
 }
 
 .text-content p {
   font-size: 1.1rem;
-  color: #6c757d;
+  color: #7f8c8d; /* Lighter gray for readability */
   margin: 10px 0 20px;
 }
 
@@ -86,14 +86,14 @@ header {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 4px solid #c471ed;
+  border: 4px solid #3498db;
   object-fit: cover;
   margin-top: 20px;
 }
 
 /* Button */
 .btn {
-  background: linear-gradient(to right, #c471ed, #f64f59);
+  background: linear-gradient(to right, #3498db, #2980b9); /* Blue gradient for a more corporate look */
   color: white;
   padding: 10px 20px;
   border-radius: 25px;
@@ -104,7 +104,7 @@ header {
 }
 
 .btn:hover {
-  background: linear-gradient(to right, #af54cc, #ee3e4f);
+  background: linear-gradient(to right, #2980b9, #1f6a8d); /* Darker blue on hover */
 }
 
 /* Section Titles */
@@ -112,7 +112,7 @@ section h2 {
   text-align: center;
   font-size: 2rem;
   font-family: 'Poppins', sans-serif;
-  color: #8e44ad;
+  color: #2c3e50; /* Professional dark color */
   margin-bottom: 30px;
 }
 
@@ -131,12 +131,12 @@ section {
   margin: 20px auto;
   border-radius: 15px;
   max-width: 800px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for a clean, corporate feel */
 }
 
 .timeline-item h3,
 .education-card h3 {
-  color: #c471ed;
+  color: #3498db;
   margin-bottom: 5px;
 }
 
@@ -154,8 +154,8 @@ section {
 }
 
 .skill-box {
-  background-color: #f9e6f9;
-  color: #6a1b9a;
+  background-color: #e2e8f0;
+  color: #34495e;
   padding: 10px 16px;
   border-radius: 8px;
   font-weight: bold;
@@ -164,10 +164,9 @@ section {
   flex: 1 1 auto;
 }
 
-
 .skill {
-  background: #fce4ec;
-  color: #8e44ad;
+  background: #ecf0f1;
+  color: #2c3e50;
   padding: 15px;
   border-radius: 12px;
   text-align: center;
@@ -190,7 +189,7 @@ section {
 
 /* Contact */
 .contact-info a {
-  color: #c471ed;
+  color: #3498db;
   text-decoration: none;
 }
 
