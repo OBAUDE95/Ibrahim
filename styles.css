@@ -5,13 +5,13 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f7fb; /* Light gray background for a more neutral and professional tone */
-  color: #333; /* Dark text for better readability */
+  background: #f4f7fb;
+  color: #333;
 }
 
 /* Header */
 header {
-  background: #2c3e50; /* Darker header background to reflect a more professional tone */
+  background: #2c3e50;
   padding: 15px 20px;
   position: fixed;
   width: 100%;
@@ -26,7 +26,7 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ecf0f1; /* Lighter logo color for contrast */
+  color: #ecf0f1;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -45,13 +45,13 @@ header {
 }
 
 .nav-links a:hover {
-  color: #3498db; /* Subtle blue hover color for interactivity */
+  color: #3498db;
 }
 
 /* Hero Section */
 #hero {
   padding: 120px 20px 60px;
-  background: linear-gradient(to bottom right, #f1f1f1, #e2e8f0); /* Soft gradient for professionalism */
+  background: linear-gradient(to bottom right, #f1f1f1, #e2e8f0);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -72,13 +72,13 @@ header {
 
 .text-content h2 {
   font-size: 2.2rem;
-  color: #3498db; /* Professional blue color */
+  color: #3498db;
   margin: 10px 0;
 }
 
 .text-content p {
   font-size: 1.1rem;
-  color: #7f8c8d; /* Lighter gray for readability */
+  color: #7f8c8d;
   margin: 10px 0 20px;
 }
 
@@ -93,7 +93,7 @@ header {
 
 /* Button */
 .btn {
-  background: linear-gradient(to right, #3498db, #2980b9); /* Blue gradient for a more corporate look */
+  background: linear-gradient(to right, #3498db, #2980b9);
   color: white;
   padding: 10px 20px;
   border-radius: 25px;
@@ -104,7 +104,7 @@ header {
 }
 
 .btn:hover {
-  background: linear-gradient(to right, #2980b9, #1f6a8d); /* Darker blue on hover */
+  background: linear-gradient(to right, #2980b9, #1f6a8d);
 }
 
 /* Section Titles */
@@ -112,37 +112,13 @@ section h2 {
   text-align: center;
   font-size: 2rem;
   font-family: 'Poppins', sans-serif;
-  color: #2c3e50; /* Professional dark color */
+  color: #2c3e50;
   margin-bottom: 30px;
 }
 
 /* Section Layout */
 section {
   padding: 60px 20px;
-}
-
-/* Cards */
-.about-text,
-.timeline-item,
-.education-card,
-.contact-info {
-  background: #fff;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 15px;
-  max-width: 800px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for a clean, corporate feel */
-}
-
-.timeline-item h3,
-.education-card h3 {
-  color: #3498db;
-  margin-bottom: 5px;
-}
-
-.date {
-  font-size: 0.9rem;
-  color: #888;
 }
 
 /* Skills Section */
@@ -182,41 +158,83 @@ section {
 
 /* Projects */
 #projects {
-  padding: 3rem 1rem;
+  padding: 4rem 2rem;
+  background-color: #f9fafb;
 }
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+  align-items: start;
 }
 
 .project-card {
-  background-color: #f1f1f1;
-  padding: 1.5rem;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+}
+
+.project-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
 }
 
 .project-card h3 {
   margin-top: 0;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  color: #2c3e50;
 }
 
 .project-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #7f8c8d;
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+.project-card ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 1rem;
+}
+
+.project-card ul li {
+  color: #7f8c8d;
   font-size: 1rem;
   line-height: 1.5;
 }
 
-/* Contact */
-.contact-info a {
-  color: #3498db;
+.project-card .view-now {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
   text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  display: none;
+  transition: background 0.3s ease-in-out;
 }
 
-.contact-info a:hover {
-  text-decoration: underline;
+.project-card:hover .view-now {
+  display: inline-block;
+}
+
+.project-card .view-now:hover {
+  background: linear-gradient(to right, #2980b9, #1f6a8d);
 }
 
 /* Responsive Fixes */
@@ -233,6 +251,22 @@ section {
   .profile-image img {
     width: 130px;
     height: 130px;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .project-card p {
+    font-size: 1rem;
   }
 }
 
